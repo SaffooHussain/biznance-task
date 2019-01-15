@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+.container {
+    height: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    //border: 1px solid;
+    position: relative;
+    @media #{$maxMobile} {
+        max-width: 540px;
+    }
+    @media #{$minSmall} {
+        width: 750px;
+    }
+    @media #{$minMedium} {
+        width: 970px;
+    }
+    @media #{$minLarge} {
+        width: 1170px;
+    }
+}

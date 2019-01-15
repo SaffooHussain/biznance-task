@@ -1,0 +1,36 @@
+footer
+    .container
+        div.parent-box
+            div.box-1
+                h6 About Biznance
+                p The world has become so fast paced that people don’t want to stand by reading a page of information, they would much rather look at a presentation and understand the message. It has come to a point where images and videos are
+        
+            div.box-2
+                h6 Navigation Links 
+                ul.ul-1
+                    each val in ['Home', 'Feature', 'Services', 'Portfolio']
+                        li: a(href="#")= val
+                ul.ul-2
+                    each val in ['Team', 'Pricing', 'Blog', 'Contact']
+                        li: a(href="#")= val
+        
+            div.box-3
+                h6 Newsletter
+                p For business professionals caught between high OEM price and mediocre print and graphic output,
+                form
+                    input(type="email" placeholder="Email address")
+                    button: <i class="fas fa-location-arrow"></i>
+        
+            div.box-4
+                h6 InstaFeed
+                ul
+                    - for (var i = 1; i < 9; i++)
+                        +instaImg(i)
+        
+            .clear
+        div.copyright
+            p Copyright ©2018 All rights reserved | This template is made with &#9825; by #[a(href="https://colorlib.com/" target="_blank" class="active") Colorlib]
+            ul
+                - var social = ['facebook-f', 'twitter', 'dribbble', 'behance']
+                each val in social
+                    li: a: i(class="fab fa-" + val)

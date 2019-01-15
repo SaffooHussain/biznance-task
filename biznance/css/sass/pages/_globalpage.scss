@@ -1,0 +1,44 @@
+/* GLOBAL */
+
+body {
+    font-family: sans-serif;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+h2 {
+    @media #{$maxMobile} {
+        font-size: 25px;
+    }
+    font-size: 33px;
+    margin-top: 0;
+    color: $blackColor;
+}
+h4 {
+    font-size: 17.4px;
+    color: $blackColor;
+}
+p {
+    font-size: $mainFontSize;
+    color: $greyColor;
+    line-height: 25px;
+}
+.active {
+    color: $mainColor !important;
+}
+.lorem {
+    margin-top: -15px;
+    margin-bottom: 70px;
+}
+.clear {
+    clear: both;
+}
+.upper {
+    text-transform: uppercase;
+}
+.center {
+    text-align: center;
+}

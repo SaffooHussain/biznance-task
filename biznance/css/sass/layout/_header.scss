@@ -1,0 +1,104 @@
+/* Start header */
+header {
+    .container {
+        @media #{$maxMobile}, #{$minSmall} {
+            padding-top: 25px;
+            padding-bottom: 22px;
+        }
+        @media #{$minMedium} {
+            padding-top: 40px;
+            padding-bottom: 36px;
+        }
+        .logo {
+            @media #{$maxMobile}, #{$minSmall} {
+                width: 100%;
+            }
+            @media #{$minMedium} {
+                width: 30%;
+                float: $float-left;
+            }
+        }
+        nav {
+            @media #{$maxMobile}, #{$minSmall} {
+                display: none;
+            }
+            @media #{$minMedium} {
+                display: block;
+            }
+            //margin-top: -26px;
+            width: 70%;
+            float: left;
+            text-align: right;
+            ul.navigation, ul.search {
+                margin: 0;
+                padding: 0;
+                display: inline-block;
+                > li {
+                    font: {
+                        size: $smallFontSize;
+                        weight: bold;
+                    }
+                    @media #{$minMedium} {
+                        display: inline-block;
+                        margin-left: 10.5px;
+                        margin-right: 10.5px;
+                    }
+                    @media #{$minLarge} {
+                        margin-left: 17.5px;
+                        margin-right: 17.5px;
+                    }
+                    > a {
+                        @extend %anchorStyle;
+                        color: $blackColor;
+                        padding: 47px 0px 40px 0px;
+                    }
+                }
+                .menu {
+                    position: relative;
+                    .submenu {
+                        position: absolute;
+                        display: none;
+                        z-index: 2;
+                        padding: 0;
+                        margin-top: 39px;
+                        background-color: $borderColor;
+                        width: 205px;
+                        text-align: left;
+                        .class1, .class2 {
+                            margin-top: 1px;
+                        }
+                        li {
+                            background-color: $white;
+                            a {
+                                color: $blackColor;
+                                display: block;
+                                padding: 16px 0 16px 35px;
+                                &:hover {
+                                    color: $white;
+                                    @include prefixer(transition, background-color 500ms, webkit moz o);
+                                    background-color: $mainColor;
+                                }
+                            }
+                        }
+                    }
+                    &:hover {
+                        .submenu {
+                            display: block;
+                        }
+                    }
+                }
+            }
+            ul.search {
+                li {
+                    margin-right: 0;
+                    a {
+                        &:hover {
+                            color: $blackColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* End header */

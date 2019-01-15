@@ -1,0 +1,25 @@
+/* Hover */
+%mainHover {
+    &:hover {
+        color: $mainColor;
+    }
+}
+
+%hover-gradient {
+    background: linear-gradient(to bottom, #8989FF, #BC79F1, #F27FD4, #E187EF);
+}
+
+/* Anchor in li in header and section4 */
+%anchorStyle {
+    @include prefixer(transition, color 500ms, webkit moz o);
+    @extend %mainHover;
+}
+
+/* Overlay style */
+%overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

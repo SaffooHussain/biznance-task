@@ -1,0 +1,9 @@
+section(id="sec-3")
+    .container
+        div(class="text-box center")
+            h2 Our Top Rated Features
+            +lorem
+        div.parent-box
+            each val, index in ['Unique Design', 'Appropriate UX', 'Perfect Visual', 'Different Layout']
+                +my4divs(val, index)
+        .clear

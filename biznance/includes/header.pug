@@ -1,0 +1,29 @@
+header
+    .container|
+        |
+        div.logo
+            a(href="index.html"): img(src="img/logo.png")
+            button.the-toggler
+                span
+                span
+                span
+        nav
+            ul(class="navigation upper")
+                li: a(href="#" class="active") home
+                li: a(href="#") about
+                li: a(href="#") services
+                li.menu
+                    a(href="#") pages
+                    ul.submenu
+                        each val, index in ['portfolio', 'portfolio details', 'elements']
+                            li(class="class" + index): a(href="#")= val
+                li.menu
+                    a(href="#") blog
+                    ul.submenu
+                        each val, index in ['blog', 'blog details']
+                            li(class="class" + index): a(href="#")= val
+                li: a(href="#") contact
+            ul.search
+                li: a(href="#"): <i class="fas fa-search"></i>
+        .clear
+        

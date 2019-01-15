@@ -1,0 +1,43 @@
+mixin lorem
+    p.lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+
+//- section 2 what we offer
+mixin myDivs(imgNum)
+    div|
+        |
+        img(src="img/offer/offer-" + imgNum + ".jpg")
+        div.text-box
+            h4 Addiction Whit Gambling
+            p It is a good idea to think of your PC as an office. It stores files, programs, pictures. This can be compared to an actual.
+
+//-section 3 Top Rated Features
+mixin my4divs(h4, i)
+    div(class="text-box" + i)
+        h4= h4
+        p Most people who work in an office environment, buy computer products, or have a computer at
+
+//- imgs for section 4 Recent Completed Projects
+mixin multiDivs(imgNum, h4)
+    div(class="child" + imgNum)
+        div.imgs
+            img(src="img/gallery/project-" + imgNum + ".jpg")
+            a(href="img/gallery/project-" + imgNum + ".jpg" class="overlay")
+                img(src="img/gallery/icon.png")
+        div.text
+            h4= h4
+            p Client Project
+
+//- divs for section 6 Latest Posts from Blog
+mixin divs(imgNum, h4)
+    div(class="box" + imgNum)|
+        |
+        img(src="img/blog/latest-post/l-post-" + imgNum + ".jpg")
+        |
+        |
+        span: a(href="#") 25 October, 2017 | By Mark Wiens
+        h4: a(href="#")= h4
+        p Computers have become ubiquitous in almost every facet of our lives. At work, desk jockeys spend hours in front of their desktops, while delivery
+
+//- photos for footer
+mixin instaImg(instaImgNumber)
+    li: img(src="img/instagram/Image-0" + instaImgNumber + ".jpg")

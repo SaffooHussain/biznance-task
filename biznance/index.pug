@@ -1,0 +1,96 @@
+include includes/mixins.pug
+doctype html
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        title Bizance Multi
+        |
+        |
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+        link(rel="stylesheet" href="css/homepage.css")
+        link(rel="stylesheet" href="css/normalize.css")
+    body
+        // start header
+        include includes/header.pug
+        // end header
+
+        // start section 1
+        section(id="sec-1")
+            .overlay
+            .container
+                div(class="center upper")
+                    h3 we combine #[br] business with finance
+                    h5 we work hard, we result perfect
+                    |
+                    |
+                    a(href="#"): button(class="button1 upper") explore us
+                    |
+                    |
+                    a(href="#"): button(class="button2 upper") get free quote
+        // end section 1
+
+        // start section 2 what we offer
+        section(id="sec-2")
+            div(class="container center")
+                div
+                    h5.upper what we offer for you
+                    p Plantronics with its GN Netcom wireless headset creates the next generation of #[b wireless headset] and other products such as wireless amplifiers, and #[b wireless headset] telephone.
+                div.parent-box
+                    +myDivs(1)
+                    +myDivs(2)
+                    +myDivs(3)
+                .clear
+        // end section 2 what we offer
+
+        // start section 3 Top Rated Features
+        include includes/sec3_Features.pug
+        // end section 3 Top Rated Features
+
+        // start section 4 Recent Completed Projects
+        section(id="sec-4")
+            div(class="container center")
+                div
+                    h2 Our Recent Completed Projects
+                    +lorem
+
+                div
+                    ul
+                        li: a(href="#" class="active") All Categories
+                        each val in ['Branding', 'Image Manipulation', 'Creative Work', 'Web Design', ' Print Material']
+                            li: a(href="#")= val
+
+                div.parent-box
+                    each val, index in ['3D Helmet Design', '2D Vinyl Design', 'Creative Poster Design', 'Embosed Logo Design', '3D Disposable Bottle', '3D Logo Design']
+                        +multiDivs(index + 1, val)
+        // end section 4 Recent Completed Projects
+
+        // start section 5 Get a free Quotation
+        section(id="sec-5")
+            div.img-left
+                img(src="img/left-img.jpg")
+            div.right
+                div
+                    h2 Get a free Quotation
+                    form 
+                        input(class="name" type="text" name="name" placeholder="Your name")
+                        input(class="phone" type="text" name="phone" placeholder="Phone")
+                        input(type="email" name="email" placeholder="Email address")
+                        textarea(placeholder="Write message")
+                        button(class="button2 upper") get free quote
+        // end section 5 Get a free Quotation
+
+        // start section 6 Latest Posts from Blog
+        section(id="sec-6")
+            .container
+                div.center
+                    h2 Latest Posts from Blog
+                    +lorem
+                div.parent-box
+                    each val, index in {1: "Addiction When Gambling Becomes A Problem", 2: "Computer Hardware Desktops And Notebooks And Handhelds", 3: "Make Myspace Your Best Designed Space", 4: "Video Games Playing With Imagination"}
+                        +divs(index, val)
+        // end section 6 Latest Posts from Blog
+
+        // start footer 
+        include includes/footer.pug
